@@ -1,10 +1,25 @@
 [gd_scene format=3 uid="uid://dmr4g1tbc0n34"]
 
+[ext_resource type="Script" uid="uid://b7ik8y5asfxp3" path="res://node_2d.gd" id="1_epypp"]
 [ext_resource type="Texture2D" uid="uid://bro0dxpj35adr" path="res://icon.svg" id="1_wtcfe"]
+[ext_resource type="PackedScene" uid="uid://bfq2mrsgathkm" path="res://UI/ui.tscn" id="2_0e48y"]
+[ext_resource type="PackedScene" uid="uid://p8u230k7wpxx" path="res://UI/research.tscn" id="4_0hol4"]
 
-[node name="Node2D" type="Node2D" unique_id=795523798]
+[node name="Node2D" type="Node2D" unique_id=795523798 node_paths=PackedStringArray("ui", "research")]
+script = ExtResource("1_epypp")
+ui = NodePath("UI")
+research = NodePath("Research")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1832641088]
-position = Vector2(579.5, 315.99997)
-scale = Vector2(8.9296875, 4.96875)
+modulate = Color(0.16078432, 1, 0, 1)
+position = Vector2(962.5, 539)
+scale = Vector2(14.9140625, 8.453125)
 texture = ExtResource("1_wtcfe")
+
+[node name="UI" parent="." unique_id=274635067 instance=ExtResource("2_0e48y")]
+z_index = 10
+offset_left = 564.0
+offset_right = 564.0
+
+[node name="Research" parent="." unique_id=2129298866 instance=ExtResource("4_0hol4")]
+visible = false

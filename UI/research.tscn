@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://p8u230k7wpxx"]
+
+[ext_resource type="Script" uid="uid://cjws86pjw2bw0" path="res://UI/research.gd" id="1_40jke"]
+
+[node name="Research" type="Control" unique_id=2129298866]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_40jke")
+
+[node name="Button" type="Button" parent="." unique_id=952809487]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.0050000004
+offset_left = 217.0
+offset_top = 805.0
+offset_right = 367.0
+offset_bottom = 866.6
+text = "click for reasearch"
+
+[node name="Line2D" type="Line2D" parent="Button" unique_id=2130106218]
+points = PackedVector2Array(78, 0, 78, -72)
+default_color = Color(0.003921569, 0.003921569, 0.003921569, 0.2)
+
+[node name="Button2" type="Button" parent="." unique_id=1418113284]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.0050000004
+offset_left = 224.0
+offset_top = 667.0
+offset_right = 374.0
+offset_bottom = 728.6
+text = "click for reasearch"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_pressed"]

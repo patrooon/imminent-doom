@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dkoun81rrcdyq"]
+
+[ext_resource type="Script" uid="uid://dolip1saxqqw3" path="res://building.gd" id="1_ekp4g"]
+
+[node name="building" type="Sprite2D" unique_id=431514080]
+centered = false
+script = ExtResource("1_ekp4g")
